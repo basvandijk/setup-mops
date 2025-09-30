@@ -9,7 +9,7 @@ This action provides caching of Mops packages and toolchain.
 Add the following step to your workflow to install Mops
 
 ```yaml
-- uses: ZenVoich/setup-mops@v1
+- uses: dfinity/setup-mops@v1
 ```
 
 ### Example
@@ -20,14 +20,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Install mops
-        uses: ZenVoich/setup-mops@v1
+        uses: dfinity/setup-mops@v1
 ```
 
 ### Specifying a mops version
 
 ```yaml
 steps:
-  - uses: ZenVoich/setup-mops@v1
+  - uses: dfinity/setup-mops@v1
     with:
       mops-version: 1
 ```
@@ -49,7 +49,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: ZenVoich/setup-mops@v1
+      - uses: dfinity/setup-mops@v1
         with:
           identity-pem: ${{ secrets.MOPS_IDENTITY_PEM }}
       - name: Publish to the Mops Registry
